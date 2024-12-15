@@ -26,9 +26,9 @@ export default {
 <style scoped>
 /* Container Styling */
 .login-container {
-  max-width: 400px;
+  max-width: 600px;
   margin: 100px auto;
-  padding: 20px;
+  padding: 30px;
   text-align: center;
   background: #ffffff;
   border-radius: 10px;
