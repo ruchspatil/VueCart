@@ -1,7 +1,7 @@
 export default {
   target: 'static', // For static site deployment
-  css: ['~/assets/css/tailwind.css'], // Add Tailwind CSS
-  buildModules: ['@nuxtjs/tailwindcss'], // Include Tailwind CSS module
+  css: ['~/assets/css/tailwind.css'], // Tailwind CSS
+  buildModules: ['@nuxtjs/tailwindcss'], // Tailwind CSS module
   app: {
     head: {
       title: 'MyShop',
