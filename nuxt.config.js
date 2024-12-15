@@ -1,7 +1,7 @@
 export default {
-  target: 'static',
-  css: [],  // Tailwind CSS entry point
-  buildModules: [],  // Tailwind CSS module
+  target: 'public',
+  css: [],  
+  buildModules: [],  
   head: {
     title: 'MyShop',
     meta: [
