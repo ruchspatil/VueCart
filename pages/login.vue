@@ -1,13 +1,28 @@
 <template>
-  <div class="login-page">
+  <div class="login-container">
     <h1>Login</h1>
-    <p>Welcome to the login page.</p>
+    <form>
+      <label for="username">Username</label>
+      <input id="username" type="text" placeholder="Enter username" />
+
+      <label for="password">Password</label>
+      <input id="password" type="password" placeholder="Enter password" />
+
+      <button type="submit">Login</button>
+    </form>
   </div>
 </template>
 
+<script>
+export default {
+  name: "LoginPage",
+};
+</script>
+
 <style scoped>
-.login-page {
+.login-container {
+  max-width: 400px;
+  margin: 50px auto;
   text-align: center;
-  margin-top: 50px;
 }
 </style>
