@@ -37,7 +37,7 @@ export default {
   name: 'App',
   methods: {
     navigateToLogin() {
-      this.$router.push('pages/login'); // Redirects to the login page
+      this.$router.push('/login'); // Redirects to the login page
     },
   },
 };
