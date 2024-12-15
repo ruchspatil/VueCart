@@ -1,7 +1,8 @@
 export default {
-  target: 'public',
-  css: [],  
-  buildModules: [],  
+ 
+  target: 'static',
+
+
   head: {
     title: 'MyShop',
     meta: [
@@ -10,8 +11,25 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
+
+  // Tailwind CSS module
+  buildModules: [
+    '@nuxtjs/tailwindcss', 
+  ],
+
+  // TailwindCSS configuration
   tailwindcss: {
+   
+  },
+
   
-    jit: true,  
-  }
+  generate: {
+    fallback: true,
+  },
+
+
+  css: [],
+
+ 
+  build: {},
 };
