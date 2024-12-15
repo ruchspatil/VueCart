@@ -9,12 +9,12 @@
     "start": "nuxt start"
   },
   "dependencies": {
-    "@nuxtjs/tailwindcss": "^5.0.0",  // Tailwind CSS module
+    "@nuxtjs/tailwindcss": "^5.0.0",
     "core-js": "^3.6.5",
     "nuxt": "^2.15.8"
   },
   "devDependencies": {
-    "tailwindcss": "^3.0.0",  // Tailwind CSS itself
+    "tailwindcss": "^3.0.0",
     "postcss": "^8.3.6",
     "autoprefixer": "^10.2.5"
   }
