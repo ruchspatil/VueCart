@@ -1,0 +1,116 @@
+{
+  "_from": "@nuxtjs/tailwindcss",
+  "_id": "@nuxtjs/tailwindcss@6.12.2",
+  "_inBundle": false,
+  "_integrity": "sha512-qPJiFH67CkTj/2kBGBzqXihOD1rQXMsbVS4vdQvfBxOBLPfGhU1yw7AATdhPl2BBjO2krjJLuZj39t7dnDYOwg==",
+  "_location": "/@nuxtjs/tailwindcss",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "@nuxtjs/tailwindcss",
+    "name": "@nuxtjs/tailwindcss",
+    "escapedName": "@nuxtjs%2ftailwindcss",
+    "scope": "@nuxtjs",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@nuxtjs/tailwindcss/-/tailwindcss-6.12.2.tgz",
+  "_shasum": "3fa41b0b9361cd69ec14934f800e66225b3c9e1f",
+  "_spec": "@nuxtjs/tailwindcss",
+  "_where": "C:\\Users\\Admin\\Desktop\\app",
+  "bugs": {
+    "url": "https://github.com/nuxt-modules/tailwindcss/issues"
+  },
+  "bundleDependencies": false,
+  "compatibility": {
+    "nuxt": "^2.9.0 || >=3.0.0-rc.1"
+  },
+  "configKey": "tailwindcss",
+  "dependencies": {
+    "@nuxt/kit": "^3.13.2",
+    "autoprefixer": "^10.4.20",
+    "consola": "^3.2.3",
+    "defu": "^6.1.4",
+    "h3": "^1.13.0",
+    "klona": "^2.0.6",
+    "pathe": "^1.1.2",
+    "postcss": "^8.4.47",
+    "postcss-nesting": "^13.0.0",
+    "tailwind-config-viewer": "^2.0.4",
+    "tailwindcss": "~3.4.13",
+    "ufo": "^1.5.4",
+    "unctx": "^2.3.1"
+  },
+  "deprecated": false,
+  "description": "Tailwind CSS module for Nuxt",
+  "devDependencies": {
+    "@fontsource/inter": "^5.1.0",
+    "@nuxt/content": "^2.13.2",
+    "@nuxt/devtools": "^1.5.2",
+    "@nuxt/eslint-config": "^0.5.7",
+    "@nuxt/module-builder": "^0.8.4",
+    "@nuxt/test-utils": "^3.14.2",
+    "@tailwindcss/typography": "^0.5.15",
+    "changelogen": "^0.5.7",
+    "destr": "^2.0.3",
+    "eslint": "^9.12.0",
+    "happy-dom": "^15.7.4",
+    "nuxt": "^3.13.2",
+    "typescript": "^5.6.2",
+    "vitest": "^2.1.2",
+    "vue-tsc": "^2.1.6"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/types.d.ts",
+      "require": "./dist/module.cjs",
+      "import": "./dist/module.mjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://github.com/nuxt-modules/tailwindcss#readme",
+  "license": "MIT",
+  "main": "./dist/module.cjs",
+  "name": "@nuxtjs/tailwindcss",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nuxt-modules/tailwindcss.git"
+  },
+  "resolutions": {
+    "@nuxtjs/tailwindcss": "link:."
+  },
+  "scripts": {
+    "build": "nuxt-module-build build",
+    "build:stub": "pnpm build --stub",
+    "dev": "nuxi dev playground",
+    "dev:build": "nuxi build playground",
+    "dev:generate": "nuxi generate playground",
+    "dev:nuxt2": "nuxi dev nuxt2-playground",
+    "dev:prepare": "pnpm prepare && pnpm build:stub",
+    "dev:preview": "nuxi preview playground",
+    "docs:build": "nuxi generate docs",
+    "docs:dev": "nuxi dev docs",
+    "docs:preview": "nuxi preview docs",
+    "lint": "eslint .",
+    "lint:fix": "pnpm lint --fix",
+    "play": "pnpm dev",
+    "release": "pnpm lint && pnpm test && pnpm prepack && pnpm changelogen --release --push && pnpm publish",
+    "test": "vitest run",
+    "test:types": "pnpm dev:prepare && tsc --noEmit && nuxi typecheck playground",
+    "test:watch": "vitest watch"
+  },
+  "stackblitz": {
+    "startCommand": "pnpm dev:prepare && pnpm dev"
+  },
+  "type": "module",
+  "types": "./dist/types.d.ts",
+  "version": "6.12.2"
+}
