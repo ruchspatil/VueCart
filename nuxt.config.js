@@ -1,7 +1,7 @@
 export default {
   target: 'static',
   css: ['~/assets/css/tailwind.css'],  // Tailwind CSS entry point
-  buildModules: ['@nuxtjs/tailwindcss'],  // Tailwind CSS module
+  buildModules: ['nuxtjs/tailwindcss'],  // Tailwind CSS module
   head: {
     title: 'MyShop',
     meta: [
