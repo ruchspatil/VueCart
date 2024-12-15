@@ -1,17 +1,16 @@
 <template>
-  <div>
-    <!-- Main Layout -->
-    <header class="bg-gray-800 text-white p-4">
-      <h1 class="text-2xl font-bold">MyShop</h1>
+  <div class="main-container">
+    <header class="header">
+      <h1 class="header-title">MyShop</h1>
     </header>
 
-    <main>
-      <div class="container mx-auto p-4">
+    <main class="content">
+      <div class="container">
         <nuxt />
       </div>
     </main>
 
-    <footer class="bg-gray-800 text-white text-center py-4">
+    <footer class="footer">
       <p>&copy; 2024 MyShop. All rights reserved.</p>
     </footer>
   </div>
@@ -24,18 +23,34 @@ export default {
 </script>
 
 <style scoped>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.main-container {
+  font-family: Arial, sans-serif;
 }
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f8fafc;
+
+.header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
 }
+
+.header-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.content {
+  padding: 20px;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
 </style>
