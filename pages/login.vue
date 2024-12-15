@@ -26,9 +26,9 @@ export default {
 <style scoped>
 /* Container Styling */
 .login-container {
-  max-width: 600px;
+  max-width: 400px;
   margin: 100px auto;
-  padding: 30px;
+  padding: 20px;
   text-align: center;
   background: #ffffff;
   border-radius: 10px;
@@ -63,7 +63,7 @@ export default {
 }
 
 .form-group input {
-  width: 100%;
+  width: 90%;
   padding: 10px 15px;
   font-size: 14px;
   border: 1px solid #cccccc;
