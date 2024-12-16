@@ -17,7 +17,7 @@
           <input type="checkbox" />
           Remember Me
         </label>
-        <router-link to="/forgot-password" class="forgot-password">Forgot Password?</router-link>
+        <router-link to="" class="forgot-password">Forgot Password?</router-link>
       </div>
 
       <button type="submit" class="login-button">Login</button>
@@ -29,7 +29,7 @@
     </form>
 
     <div class="signup-link">
-      Don't have an account? <router-link to="/signup">Sign Up</router-link>
+      Don't have an account? <router-link to="">Sign Up</router-link>
     </div>
   </div>
 </template>
