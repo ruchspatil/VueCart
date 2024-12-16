@@ -1,199 +1,198 @@
-
-        <template>
-  <div class="main-container">
+<template>
+  <div>
     <header class="header">
       <nav class="navbar">
-        <h1 class="header-title">MyShop</h1>
-        <ul class="nav-links">
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#features" class="nav-link">Features</a></li>
-          <li><button class="login-button" @click="navigateToLogin">Login</button></li>
+        <h2 class="logo">
+          <router-link to="#">CodingNepal</router-link>
+        </h2>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" id="hamburger-btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              d="M3 12h18M3 6h18M3 18h18"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </label>
+        <ul class="links">
+          <li><router-link to="#">Home</router-link></li>
+          <li><router-link to="#">About Us</router-link></li>
+          <li><router-link to="#">Services</router-link></li>
+          <li><router-link to="#">Portfolio</router-link></li>
+          <li><router-link to="#">Contact Us</router-link></li>
         </ul>
+        <div class="buttons">
+          <router-link to="#" class="signin">Sign In</router-link>
+          <router-link to="#" class="signup">Sign Up</router-link>
+        </div>
       </nav>
     </header>
-
-    <main class="content">
-      <div class="container">
-        <section class="hero">
-          <div class="hero-text">
-            <h2 class="hero-title">Welcome to MyShop</h2>
-            <p class="hero-description">Your one-stop solution for online store management.</p>
-          </div>
-        </section>
-
-        <section id="about" class="about">
-          <h2 class="section-title">About MyShop</h2>
-          <p class="description">
-            MyShop is an intuitive online store management system that allows store owners to manage their inventory, track orders, and provide a smooth shopping experience for customers.
-          </p>
-        </section>
-
-        <section id="features" class="features">
-          <h2 class="section-title">Features</h2>
-          <ul class="feature-list">
-            <li>Easy inventory management</li>
-            <li>Order tracking and notifications</li>
-            <li>Customer support tools</li>
-            <li>Customizable store layout</li>
-          </ul>
-        </section>
+    <section class="hero-section">
+      <div class="hero">
+        <h2>Mobile App Development</h2>
+        <p>
+          Join us in the exciting world of programming and turn your ideas into
+          reality. Unlock the world of endless possibilities - learn to code and
+          shape the digital future with us.
+        </p>
+        <div class="buttons">
+          <router-link to="#" class="join">Join Now</router-link>
+          <router-link to="#" class="learn">Learn More</router-link>
+        </div>
       </div>
-    </main>
-
-    <footer class="footer">
-      <p>&copy; 2024 MyShop. All rights reserved.</p>
-    </footer>
+      <div class="img">
+        <img
+          src="https://www.codingnepalweb.com/demos/create-responsive-website-html-css/hero-bg.png"
+          alt="hero image"
+        />
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App',
-  methods: {
-    navigateToLogin() {
-      this.$router.push('/login'); // Redirects to the login page
-    },
-  },
+  name: "ResponsiveHomePage",
 };
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-
-:root {
-  --primary-color: #1e3a8a; /* Indigo */
-  --primary-light: #3b82f6; /* Blue */
-  --accent-color: #f43f5e; /* Red */
-  --background-color: #f9fafb; /* Light Gray */
-  --text-color: #1f2937; /* Dark Gray */
-  --white: #ffffff;
-  --header-bg: #1e3a8a;
-  --footer-bg: #1e3a8a;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: var(--background-color);
-  color: var(--text-color);
-}
-
-.main-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
 .header {
-  background-color: var(--header-bg);
-  padding: 20px 40px;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 .navbar {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 15px;
 }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-link {
-  color: var(--white);
+.logo a {
   text-decoration: none;
-  font-weight: 600;
-  font-size: 16px;
-  transition: color 0.3s ease;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
 }
 
-.nav-link:hover {
-  color: var(--accent-color);
+#menu-toggle {
+  display: none;
 }
 
-.login-button {
-  background-color: var(--accent-color);
-  color: var(--white);
-  border: none;
-  border-radius: 4px;
-  padding: 10px 20px;
+#hamburger-btn {
+  display: none;
   cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
 }
 
-.login-button:hover {
-  background-color: #d61f42;
+.links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
 }
 
-.content {
-  flex: 1;
-  padding: 60px 20px;
+.links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
+.links a:hover {
+  color: #007bff;
+}
+
+.buttons a {
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.signin {
+  color: #fff;
+  background-color: #6c757d;
+  margin-right: 10px;
+}
+
+.signin:hover {
+  background-color: #5a6268;
+}
+
+.signup {
+  color: #fff;
+  background-color: #007bff;
+}
+
+.signup:hover {
+  background-color: #0056b3;
+}
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 20px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
 }
 
 .hero {
-  background: linear-gradient(135deg, var(--primary-light), var(--primary-color));
-  color: var(--white);
-  text-align: center;
-  padding: 80px 20px;
-  border-radius: 8px;
-  margin-bottom: 40px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
 }
 
-.hero-title {
-  font-size: 40px;
-  font-weight: bold;
+.hero h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.hero p {
+  font-size: 18px;
+  line-height: 1.6;
   margin-bottom: 20px;
 }
 
-.hero-description {
-  font-size: 18px;
-  line-height: 1.6;
-  margin: 0 auto;
-  max-width: 800px;
+.hero .buttons a {
+  margin-right: 10px;
 }
 
-.section-title {
-  font-size: 28px;
-  font-weight: 600;
-  margin-bottom: 15px;
-  color: var(--primary-color);
-  text-align: left;
+.hero .join {
+  background-color: #007bff;
+  color: #fff;
 }
 
-.description {
-  font-size: 16px;
-  line-height: 1.8;
-  text-align: justify;
+.hero .join:hover {
+  background-color: #0056b3;
 }
 
-.feature-list {
-  list-style-type: disc;
-  padding-left: 20px;
-  font-size: 16px;
-  line-height: 1.8;
+.hero .learn {
+  background-color: #6c757d;
+  color: #fff;
 }
 
-.feature-list li {
-  margin-bottom: 10px;
+.hero .learn:hover {
+  background-color: #5a6268;
 }
 
-.footer {
-  background-color: var(--footer-bg);
-  color: var(--white);
-  text-align: center;
-  padding: 20px;
-  margin-top: auto;
+.img img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 </style>
