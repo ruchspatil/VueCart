@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div id="body">
+    <router-view />
     <header class="header">
       <nav class="navbar">
         <h2 class="logo">
@@ -34,7 +35,7 @@
     </header>
     <section class="hero-section">
       <div class="hero">
-        <h2>Online store management</h2>
+        <h2>Store Management</h2>
         <p>
           MyShop is an intuitive online store management system that allows store owners to manage their inventory, track orders, and provide a smooth shopping experience for customers.
         </p>
@@ -63,7 +64,7 @@ export default {
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
 }
-body {
+#body {
   height: 100vh;
   width: 100%;
   background-color: #B1D4E0; 
@@ -154,7 +155,7 @@ body {
 }
 .hero-section .buttons a {
   text-decoration: none;
-  color: #47b2e4;;
+  color: #fff;
   padding: 12px 24px;
   border-radius: 0.375rem;
   font-weight: 600;
@@ -165,14 +166,15 @@ body {
   margin-right: 15px;
 }
 .buttons .join {
-  background-color: #47b2e4;
+  background-color: #2E8BC0;
 }
 .hero-section .buttons .learn {
-  border: 1px solid #fff;
+  border: 1px solid #2E8BC0;
   border-radius: 0.375rem;
 }
 .hero-section .buttons a:hover {
-  background-color: #0C2D48;
+  background-color: #fff;
+  color: #0C2D48;
 }
 /* Hamburger menu styles */
 #menu-toggle {
