@@ -86,7 +86,7 @@ body {
 .navbar .logo a {
   font-size: 1.8rem;
   text-decoration: none;
-  color: #fff;
+  color: #0C2D48;
 }
 .navbar .links {
   display: flex;
