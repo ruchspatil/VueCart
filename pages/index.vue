@@ -29,7 +29,7 @@
           <li><router-link to="#">Contact Us</router-link></li>
         </ul>
         <div class="buttons">
-          <router-link to="#" class="signup">Login</router-link>
+          <router-link to="/login" class="signup">Login</router-link>
         </div>
       </nav>
     </header>
@@ -58,21 +58,21 @@ export default {
 /* Importing Google font - Open Sans */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
 
-/* Reset styles and ensure consistent layout */
+
 html,
 body {
   margin: 0;
   padding: 0;
-  height: 100%; /* Ensure html and body span the full height */
-  width: 100%; /* Ensure html and body span the full width */
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  height: 100%;
+  width: 100%; 
+  overflow-x: hidden; 
   background: rgb(19,15,126);
   background: linear-gradient(0deg, rgba(19,15,126,1) 0%, rgba(231,241,255,1) 100%);
   font-family: "Open Sans", sans-serif;
 }
 
 #app {
-  min-height: 100vh; /* Ensure the root element spans the full height */
+  min-height: 100vh; 
   display: flex;
   flex-direction: column;
 }
