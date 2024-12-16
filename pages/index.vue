@@ -1,5 +1,5 @@
 <template>
-  <div id="body">
+  <div id="app">
     <router-view />
     <header class="header">
       <nav class="navbar">
@@ -54,22 +54,29 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 /* Importing Google font - Open Sans */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
 
-* {
+/* Reset styles and ensure consistent layout */
+html,
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  height: 100%; /* Ensure html and body span the full height */
+  width: 100%; /* Ensure html and body span the full width */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  background-color: #B1D4E0; /* Apply the desired background color */
   font-family: "Open Sans", sans-serif;
 }
-#body {
-  height: 100vh;
-  width: 100%;
-  background-color: #B1D4E0; 
+
+#app {
+  min-height: 100vh; /* Ensure the root element spans the full height */
+  display: flex;
+  flex-direction: column;
 }
 
+/* Header Styles */
 .header {
   position: fixed;
   top: 0;
@@ -115,9 +122,6 @@ export default {
 .navbar .buttons a:not(:last-child) {
   margin-right: 30px;
 }
-.navbar .buttons .signin:hover {
-  color: #47b2e4;
-}
 .navbar .buttons .signup {
   border: 1px solid #fff;
   padding: 10px 20px;
@@ -128,11 +132,13 @@ export default {
 .navbar .buttons .signup:hover {
   color: #0C2D48;
 }
+
+/* Hero Section Styles */
 .hero-section {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  height: 95vh;
+  height: 100vh; /* Ensure it spans the full viewport height */
   padding: 0 15px;
   max-width: 1200px;
   margin: 0 auto;
@@ -140,6 +146,7 @@ export default {
 .hero-section .hero {
   max-width: 50%;
   color: #145DA0;
+  text-align: center; /* Center the text */
 }
 .hero h2 {
   font-size: 2.5rem;
@@ -176,6 +183,7 @@ export default {
   background-color: #fff;
   color: #0C2D48;
 }
+
 /* Hamburger menu styles */
 #menu-toggle {
   display: none;
@@ -185,7 +193,6 @@ export default {
   color: #fff;
   cursor: pointer;
   display: none;
-  order: 1;
 }
 @media screen and (max-width: 1023px) {
   .navbar .logo a {
