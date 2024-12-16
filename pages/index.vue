@@ -47,28 +47,17 @@
           <router-link to="#" class="learn">Learn More</router-link>
         </div>
       </div>
-      <div class="img">
-       
-         <img :src="require('@/assets/store.jpg')" alt="Image" />
-
-
-      </div>
+     
     </section>
   </div>
 </template>
 
 <script>
-import storeImage from '@/assets/store.jpg';
-
 export default {
-  name: "ResponsiveHomePage",
-  data() {
-    return {
-      imagePath: storeImage,
-    };
-  },
+  name: "ResponsiveHomePage"
 };
 </script>
+
 
 
 <style scoped>
