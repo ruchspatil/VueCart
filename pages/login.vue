@@ -73,7 +73,7 @@ export default {
 }
 
 .form-group input:focus {
-  border-color: #4caf50;
+  border-color: #291e5c
   box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
 }
 
@@ -82,7 +82,7 @@ export default {
   padding: 12px 20px;
   font-size: 16px;
   color: white;
-  background-color: #4caf50;
+  background-color: #2755ab;
   border: none;
   border-radius: 5px;
   cursor: pointer;
