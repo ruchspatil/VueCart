@@ -65,8 +65,8 @@ export default {
 
 /* Card Styling */
 .card {
-  flex: 1 1 calc(48% - 20px); /* Cards take up 48% width, adjust for the gap */
-  max-width: 500px; /* Prevent cards from growing too large */
+  flex: 1 1 calc(24% - 20px); 
+  max-width: 500px; 
   background: #ffffff;
   padding: 24px;
   border-radius: 15px;
@@ -120,7 +120,7 @@ export default {
   }
 
   .card {
-    flex: 1 1 100%; /* Cards take full width */
+    flex: 1 1 100%; 
     padding: 16px;
   }
 
