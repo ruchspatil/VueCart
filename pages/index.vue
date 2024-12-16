@@ -3,7 +3,7 @@
     <header class="header">
       <nav class="navbar">
         <h2 class="logo">
-          <router-link to="#">CodingNepal</router-link>
+          <router-link to="#">MyShop</router-link>
         </h2>
         <input type="checkbox" id="menu-toggle" />
         <label for="menu-toggle" id="hamburger-btn">
@@ -25,12 +25,10 @@
           <li><router-link to="#">Home</router-link></li>
           <li><router-link to="#">About Us</router-link></li>
           <li><router-link to="#">Services</router-link></li>
-          <li><router-link to="#">Portfolio</router-link></li>
           <li><router-link to="#">Contact Us</router-link></li>
         </ul>
         <div class="buttons">
-          <router-link to="#" class="signin">Sign In</router-link>
-          <router-link to="#" class="signup">Sign Up</router-link>
+          <router-link to="#" class="signup">Login</router-link>
         </div>
       </nav>
     </header>
@@ -38,9 +36,8 @@
       <div class="hero">
         <h2>Mobile App Development</h2>
         <p>
-          Join us in the exciting world of programming and turn your ideas into
-          reality. Unlock the world of endless possibilities - learn to code and
-          shape the digital future with us.
+          MyShop is an intuitive online store management system that allows store owners to manage their inventory, track orders, and provide a smooth shopping experience for customers.
+   
         </p>
         <div class="buttons">
           <router-link to="#" class="join">Join Now</router-link>
@@ -59,137 +56,172 @@ export default {
 </script>
 
 
-
-<style scoped>
-.header {
+/* Importing Google font - Open Sans */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+body {
+  height: 100vh;
   width: 100%;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to bottom, #175d69 23%, #330c43 95%);
+}
+.header {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
+  width: 100%;
 }
-
 .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
+  padding: 20px 15px;
 }
-
-.logo a {
+.navbar .logo a {
+  font-size: 1.8rem;
   text-decoration: none;
-  font-size: 24px;
-  font-weight: bold;
-  color: #333;
+  color: #fff;
 }
-
+.navbar .links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 35px;
+}
+.navbar .links a {
+  font-weight: 500;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 0;
+  transition: 0.2s ease;
+}
+.navbar .links a:hover {
+  color: #47b2e4;
+}
+.navbar .buttons a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: 15px 0;
+  transition: 0.2s ease;
+}
+.navbar .buttons a:not(:last-child) {
+  margin-right: 30px;
+}
+.navbar .buttons .signin:hover {
+  color: #47b2e4;
+}
+.navbar .buttons .signup {
+  border: 1px solid #fff;
+  padding: 10px 20px;
+  border-radius: 0.375rem;
+  text-align: center;
+  transition: 0.2s ease;
+}
+.navbar .buttons .signup:hover {
+  background-color: #47b2e4;
+  color: #fff;
+}
+.hero-section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 95vh;
+  padding: 0 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.hero-section .hero {
+  max-width: 50%;
+  color: #fff;
+}
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #c9c7c7;
+}
+.hero-section .img img {
+  width: 517px;
+}
+.hero-section .buttons {
+  margin-top: 40px;
+}
+.hero-section .buttons a {
+  text-decoration: none;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: 0.2s ease;
+  display: inline-block;
+}
+.hero-section .buttons a:not(:last-child) {
+  margin-right: 15px;
+}
+.buttons .join {
+  background-color: #47b2e4;
+}
+.hero-section .buttons .learn {
+  border: 1px solid #fff;
+  border-radius: 0.375rem;
+}
+.hero-section .buttons a:hover {
+  background-color: #47b2e4;
+}
+/* Hamburger menu styles */
 #menu-toggle {
   display: none;
 }
-
 #hamburger-btn {
-  display: none;
+  font-size: 1.8rem;
+  color: #fff;
   cursor: pointer;
+  display: none;
+  order: 1;
+}
+@media screen and (max-width: 1023px) {
+  .navbar .logo a {
+    font-size: 1.5rem;
+  }
+  .links {
+    position: fixed;
+    left: -100%;
+    top: 75px;
+    width: 100%;
+    height: 100vh;
+    padding-top: 50px;
+    background: #175d69;
+    flex-direction: column;
+    transition: 0.3s ease;
+  }
+  .navbar #menu-toggle:checked ~ .links {
+    left: 0;
+  }
+  .navbar #hamburger-btn {
+    display: block;
+  }
+  .header .buttons {
+    display: none;
+  }
+  .hero-section .hero {
+    max-width: 100%;
+    text-align: center;
+  }
+  .hero-section img {
+    display: none;
+  }
 }
 
-.links {
-  display: flex;
-  list-style: none;
-  gap: 20px;
-}
 
-.links a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  transition: color 0.3s;
-}
 
-.links a:hover {
-  color: #007bff;
-}
-
-.buttons a {
-  text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-.signin {
-  color: #fff;
-  background-color: #6c757d;
-  margin-right: 10px;
-}
-
-.signin:hover {
-  background-color: #5a6268;
-}
-
-.signup {
-  color: #fff;
-  background-color: #007bff;
-}
-
-.signup:hover {
-  background-color: #0056b3;
-}
-
-.hero-section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 100px 20px;
-  background-color: #f8f9fa;
-  min-height: 100vh;
-}
-
-.hero {
-  max-width: 600px;
-}
-
-.hero h2 {
-  font-size: 36px;
-  margin-bottom: 15px;
-  color: #333;
-}
-
-.hero p {
-  font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-.hero .buttons a {
-  margin-right: 10px;
-}
-
-.hero .join {
-  background-color: #007bff;
-  color: #fff;
-}
-
-.hero .join:hover {
-  background-color: #0056b3;
-}
-
-.hero .learn {
-  background-color: #6c757d;
-  color: #fff;
-}
-
-.hero .learn:hover {
-  background-color: #5a6268;
-}
-
-.img img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-</style>
+ 
