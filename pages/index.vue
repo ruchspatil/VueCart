@@ -66,8 +66,9 @@ export default {
 body {
   height: 100vh;
   width: 100%;
-  background: linear-gradient(to bottom, #175d69 23%, #330c43 95%);
+  background-color: #B1D4E0; 
 }
+
 .header {
   position: fixed;
   top: 0;
