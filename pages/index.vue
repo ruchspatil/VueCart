@@ -58,12 +58,10 @@
 </template>
 
 <script>
-export default {
-  name: "ResponsiveHomePage",
-};
 import storeImage from '@/assets/store.jpg';
 
 export default {
+  name: "ResponsiveHomePage",
   data() {
     return {
       imagePath: storeImage,
@@ -71,6 +69,7 @@ export default {
   },
 };
 </script>
+
 
 <style scoped>
 .header {
