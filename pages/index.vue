@@ -37,27 +37,26 @@
         <h2>Mobile App Development</h2>
         <p>
           MyShop is an intuitive online store management system that allows store owners to manage their inventory, track orders, and provide a smooth shopping experience for customers.
-   
         </p>
         <div class="buttons">
           <router-link to="#" class="join">Join Now</router-link>
           <router-link to="#" class="learn">Learn More</router-link>
         </div>
       </div>
-     
     </section>
   </div>
 </template>
 
 <script>
 export default {
-  name: "ResponsiveHomePage"
+  name: "ResponsiveHomePage",
 };
 </script>
 
-
+<style scoped>
 /* Importing Google font - Open Sans */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -150,9 +149,6 @@ body {
   margin-bottom: 20px;
   color: #c9c7c7;
 }
-.hero-section .img img {
-  width: 517px;
-}
 .hero-section .buttons {
   margin-top: 40px;
 }
@@ -221,7 +217,4 @@ body {
     display: none;
   }
 }
-
-
-
- 
+</style>
