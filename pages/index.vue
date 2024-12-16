@@ -48,10 +48,10 @@
         </div>
       </div>
       <div class="img">
-        <img
-          src="https://www.codingnepalweb.com/demos/create-responsive-website-html-css/hero-bg.png"
-          alt="hero image"
-        />
+       
+        <img src="/images/store.jpg" alt="Image" />
+
+
       </div>
     </section>
   </div>
