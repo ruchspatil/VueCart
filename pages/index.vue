@@ -1,8 +1,14 @@
 <template>
   <div class="main-container">
     <header class="header">
-      <h1 class="header-title">MyShop</h1>
-      <button class="login-button" @click="navigateToLogin">Login</button>
+      <nav class="navbar">
+        <h1 class="header-title">MyShop</h1>
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#features" class="nav-link">Features</a></li>
+          <li><button class="login-button" @click="navigateToLogin">Login</button></li>
+        </ul>
+      </nav>
     </header>
 
     <main class="content">
@@ -14,14 +20,14 @@
           </div>
         </section>
 
-        <section class="about">
+        <section id="about" class="about">
           <h2 class="section-title">About MyShop</h2>
           <p class="description">
             MyShop is an intuitive online store management system that allows store owners to manage their inventory, track orders, and provide a smooth shopping experience for customers.
           </p>
         </section>
 
-        <section class="features">
+        <section id="features" class="features">
           <h2 class="section-title">Features</h2>
           <ul class="feature-list">
             <li>Easy inventory management</li>
@@ -54,12 +60,14 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 :root {
-  --primary-color: #ff9800;
-  --primary-color-hover: #e68900;
+  --primary-color: #4caf50; /* Green */
+  --primary-color-hover: #43a047;
+  --secondary-color: #ff9800; /* Orange */
+  --secondary-color-hover: #fb8c00;
   --text-color: #333;
   --background-color: #f9f9f9;
-  --header-bg: #333;
-  --footer-bg: #333;
+  --header-bg: #2c3e50; /* Dark Blue */
+  --footer-bg: #2c3e50;
   --white: #ffffff;
 }
 
@@ -76,18 +84,36 @@ export default {
   background-color: var(--header-bg);
   color: var(--white);
   padding: 20px;
+}
+
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.header-title {
-  font-size: 28px;
-  font-weight: bold;
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--secondary-color);
 }
 
 .login-button {
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   color: var(--white);
   border: none;
   border-radius: 4px;
@@ -98,7 +124,7 @@ export default {
 }
 
 .login-button:hover {
-  background-color: var(--primary-color-hover);
+  background-color: var(--secondary-color-hover);
 }
 
 .content {
