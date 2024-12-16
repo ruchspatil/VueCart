@@ -34,7 +34,7 @@
     </header>
     <section class="hero-section">
       <div class="hero">
-        <h2>Mobile App Development</h2>
+        <h2>Online store management</h2>
         <p>
           MyShop is an intuitive online store management system that allows store owners to manage their inventory, track orders, and provide a smooth shopping experience for customers.
         </p>
@@ -138,7 +138,7 @@ body {
 }
 .hero-section .hero {
   max-width: 50%;
-  color: #fff;
+  color: #145DA0;
 }
 .hero h2 {
   font-size: 2.5rem;
@@ -154,7 +154,7 @@ body {
 }
 .hero-section .buttons a {
   text-decoration: none;
-  color: #fff;
+  color: #47b2e4;;
   padding: 12px 24px;
   border-radius: 0.375rem;
   font-weight: 600;
@@ -172,7 +172,7 @@ body {
   border-radius: 0.375rem;
 }
 .hero-section .buttons a:hover {
-  background-color: #47b2e4;
+  background-color: #0C2D48;
 }
 /* Hamburger menu styles */
 #menu-toggle {
