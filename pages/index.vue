@@ -106,7 +106,7 @@ body {
 }
 .navbar .buttons a {
   text-decoration: none;
-  color: #fff;
+  color: #0C2D48;
   font-size: 1rem;
   padding: 15px 0;
   transition: 0.2s ease;
@@ -126,7 +126,7 @@ body {
 }
 .navbar .buttons .signup:hover {
   background-color: #47b2e4;
-  color: #fff;
+  color: #0C2D48;
 }
 .hero-section {
   display: flex;
