@@ -11,9 +11,16 @@
           :key="index"
           class="flex justify-between items-center py-2 border-b border-gray-200 last:border-none"
         >
-          <span class="text-gray-700 font-medium">{{ item.name }} - {{ item.price }}</span>
-          <div class="flex space-x-2">
-            <button class="button-secondary" @click="editMenuItem(index)">Edit</button>
+          <span class="text-gray-700 font-medium">
+            {{ item.name }} - {{ item.price }}
+          </span>
+          <div class="flex space-x-3">
+            <button
+              class="button-secondary"
+              @click="startEditingItem(index)"
+            >
+              Edit
+            </button>
             <button
               class="button-danger"
               @click="deleteMenuItem(index)"
@@ -25,15 +32,15 @@
       </ul>
     </div>
 
-    <!-- Add New Menu Item -->
+    <!-- Add / Edit Menu Item -->
     <div class="card mt-6">
-      <h2 class="card-title">Add New Item</h2>
-      <form @submit.prevent="addMenuItem">
+      <h2 class="card-title">{{ isEditing ? 'Edit Item' : 'Add New Item' }}</h2>
+      <form @submit.prevent="isEditing ? updateMenuItem() : addMenuItem()">
         <div class="mb-4">
           <label for="item-name" class="block text-gray-600">Item Name</label>
           <input
             type="text"
-            v-model="newItemName"
+            v-model="currentItem.name"
             id="item-name"
             class="input-field"
             placeholder="Enter item name"
@@ -44,7 +51,7 @@
           <label for="item-price" class="block text-gray-600">Price</label>
           <input
             type="number"
-            v-model="newItemPrice"
+            v-model="currentItem.price"
             id="item-price"
             class="input-field"
             placeholder="Enter price"
@@ -52,7 +59,17 @@
             required
           />
         </div>
-        <button type="submit" class="button">Add Item</button>
+        <button type="submit" class="button">
+          {{ isEditing ? 'Update Item' : 'Add Item' }}
+        </button>
+        <button
+          v-if="isEditing"
+          type="button"
+          class="button-secondary ml-4"
+          @click="cancelEditing"
+        >
+          Cancel
+        </button>
       </form>
     </div>
   </div>
@@ -62,30 +79,49 @@
 export default {
   data() {
     return {
-      newItemName: '',
-      newItemPrice: '',
+      currentItem: { name: '', price: '' },
+      isEditing: false,
+      editingIndex: null,
       menuItems: [
-        { name: 'Pizza', price: '$15.00' },
-        { name: 'Burger', price: '$10.00' },
+        { name: 'Pizza', price: '15.00' },
+        { name: 'Burger', price: '10.00' },
       ],
     };
   },
   methods: {
     addMenuItem() {
-      if (this.newItemName && this.newItemPrice) {
+      if (this.currentItem.name && this.currentItem.price) {
         this.menuItems.push({
-          name: this.newItemName,
-          price: `$${parseFloat(this.newItemPrice).toFixed(2)}`,
+          name: this.currentItem.name,
+          price: parseFloat(this.currentItem.price).toFixed(2),
         });
-        this.newItemName = '';
-        this.newItemPrice = '';
+        this.resetForm();
       }
     },
     deleteMenuItem(index) {
       this.menuItems.splice(index, 1);
     },
-    editMenuItem(index) {
-      alert(`Edit functionality for item #${index + 1} coming soon!`);
+    startEditingItem(index) {
+      this.isEditing = true;
+      this.editingIndex = index;
+      this.currentItem = { ...this.menuItems[index] }; // Clone the item for editing
+    },
+    updateMenuItem() {
+      if (this.currentItem.name && this.currentItem.price) {
+        this.menuItems.splice(this.editingIndex, 1, {
+          name: this.currentItem.name,
+          price: parseFloat(this.currentItem.price).toFixed(2),
+        });
+        this.resetForm();
+      }
+    },
+    cancelEditing() {
+      this.resetForm();
+    },
+    resetForm() {
+      this.isEditing = false;
+      this.editingIndex = null;
+      this.currentItem = { name: '', price: '' };
     },
   },
 };
