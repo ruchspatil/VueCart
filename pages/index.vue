@@ -61,6 +61,15 @@
 export default {
   name: "ResponsiveHomePage",
 };
+import storeImage from '@/assets/store.jpg';
+
+export default {
+  data() {
+    return {
+      imagePath: storeImage,
+    };
+  },
+};
 </script>
 
 <style scoped>
