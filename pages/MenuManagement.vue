@@ -3,7 +3,7 @@
     <h1 class="text-3xl font-bold mb-6">Menu Management</h1>
 
     <!-- Menu List -->
-    <div class="card">
+    <div class="card w-3/4">
       <h2 class="card-title">Current Menu</h2>
       <ul>
         <li class="flex justify-between items-center py-2">
@@ -21,7 +21,7 @@
     </div>
 
     <!-- Add New Menu Item -->
-    <div class="card mt-6">
+    <div class="card w-3/4 mt-6">
       <h2 class="card-title">Add New Item</h2>
       <form @submit.prevent="addMenuItem">
         <div class="mb-4">
@@ -52,7 +52,7 @@ export default {
   },
   methods: {
     addMenuItem() {
-      this.menuItems.push({ name: this.newItemName, price: this.newItemPrice });
+      this.menuItems.push({ name: this.newItemName, price: `$${this.newItemPrice}` });
       this.newItemName = '';
       this.newItemPrice = '';
     }
@@ -79,6 +79,8 @@ export default {
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
   text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 75%; /* Increase card width */
+  max-width: 800px; /* Optional: Add max-width for larger screens */
 }
 
 .card:hover {
@@ -126,6 +128,7 @@ export default {
 @media (max-width: 640px) {
   .card {
     padding: 16px;
+    width: 100%; /* Full width for smaller screens */
   }
 
   .card-title {
