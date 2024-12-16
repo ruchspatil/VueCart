@@ -1,4 +1,5 @@
-<template>
+
+        <template>
   <div class="main-container">
     <header class="header">
       <nav class="navbar">
@@ -60,14 +61,14 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 :root {
-  --primary-color: #1d3557; /* Dark Blue */
-  --primary-color-light: #457b9d; /* Medium Blue */
-  --accent-color: #e63946; /* Red */
-  --background-color: #f1faee; /* Light Background */
-  --text-color: #343a40; /* Dark Gray */
+  --primary-color: #1e3a8a; /* Indigo */
+  --primary-light: #3b82f6; /* Blue */
+  --accent-color: #f43f5e; /* Red */
+  --background-color: #f9fafb; /* Light Gray */
+  --text-color: #1f2937; /* Dark Gray */
   --white: #ffffff;
-  --header-bg: #1d3557;
-  --footer-bg: #1d3557;
+  --header-bg: #1e3a8a;
+  --footer-bg: #1e3a8a;
 }
 
 body {
@@ -127,7 +128,7 @@ body {
 }
 
 .login-button:hover {
-  background-color: #d62828;
+  background-color: #d61f42;
 }
 
 .content {
@@ -141,7 +142,7 @@ body {
 }
 
 .hero {
-  background: linear-gradient(135deg, var(--primary-color-light), var(--primary-color));
+  background: linear-gradient(135deg, var(--primary-light), var(--primary-color));
   color: var(--white);
   text-align: center;
   padding: 80px 20px;
@@ -159,6 +160,8 @@ body {
 .hero-description {
   font-size: 18px;
   line-height: 1.6;
+  margin: 0 auto;
+  max-width: 800px;
 }
 
 .section-title {
@@ -166,17 +169,20 @@ body {
   font-weight: 600;
   margin-bottom: 15px;
   color: var(--primary-color);
+  text-align: left;
 }
 
 .description {
   font-size: 16px;
   line-height: 1.8;
+  text-align: justify;
 }
 
 .feature-list {
   list-style-type: disc;
   padding-left: 20px;
   font-size: 16px;
+  line-height: 1.8;
 }
 
 .feature-list li {
