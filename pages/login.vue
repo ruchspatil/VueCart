@@ -1,15 +1,25 @@
 <template>
   <div class="login-container">
     <h1>Login</h1>
-    <form class="login-form">
+    <form class="login-form" @submit.prevent="handleLogin">
       <div class="form-group">
         <label for="username">Username</label>
-        <input id="username" type="text" placeholder="Enter your username" />
+        <input
+          id="username"
+          v-model="username"
+          type="text"
+          placeholder="Enter your username"
+        />
       </div>
 
       <div class="form-group">
         <label for="password">Password</label>
-        <input id="password" type="password" placeholder="Enter your password" />
+        <input
+          id="password"
+          v-model="password"
+          type="password"
+          placeholder="Enter your password"
+        />
       </div>
 
       <div class="form-group remember-me">
@@ -17,7 +27,9 @@
           <input type="checkbox" />
           Remember Me
         </label>
-        <router-link to="" class="forgot-password">Forgot Password?</router-link>
+        <router-link to="/forgot-password" class="forgot-password"
+          >Forgot Password?</router-link
+        >
       </div>
 
       <button type="submit" class="login-button">Login</button>
@@ -29,7 +41,7 @@
     </form>
 
     <div class="signup-link">
-      Don't have an account? <router-link to="">Sign Up</router-link>
+      Don't have an account? <router-link to="/signup">Sign Up</router-link>
     </div>
   </div>
 </template>
@@ -37,6 +49,24 @@
 <script>
 export default {
   name: "LoginPage",
+  data() {
+    return {
+      username: "",
+      password: "",
+      validUsername: "user123", // Predefined username
+      validPassword: "pass123", // Predefined password
+    };
+  },
+  methods: {
+    handleLogin() {
+      if (this.username === this.validUsername && this.password === this.validPassword) {
+        // Redirect to the Dashboard
+        this.$router.push("/dashboard");
+      } else {
+        alert("Invalid username or password. Please try again.");
+      }
+    },
+  },
 };
 </script>
 
