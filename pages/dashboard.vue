@@ -16,7 +16,7 @@
         </button>
 
         <!-- User Image -->
-        <img src="https://via.placeholder.com/40" alt="User" class="w-10 h-10 rounded-full border-2 border-blue-600" />
+        <img src="https://via.placeholder.com/40" alt="User" class="user-image" />
       </div>
     </nav>
 
@@ -68,12 +68,22 @@ export default {
   position: sticky;
   top: 0;
   z-index: 10;
+  padding: 10px 20px;
+}
+
+.navbar .user-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #1e3a8a; /* Deep blue border */
 }
 
 /* Main Container */
 .dashboard-container {
   background: linear-gradient(to right, #e3f2fd, #fefefe, #f1f8ff);
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Flex-Based Card Container */
@@ -89,43 +99,43 @@ export default {
 /* Card Styling */
 .card {
   flex: 1 1 calc(24% - 20px);
-  max-width: 500px;
+  max-width: 300px;
   background: #ffffff;
-  padding: 24px;
-  border-radius: 15px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.15);
 }
 
 .card-title {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   color: #374151; /* Dark gray */
 }
 
 .card-value {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: bold;
-  margin-top: 12px;
+  margin-top: 10px;
   color: #1e3a8a; /* Deep blue */
 }
 
 /* Button Styling */
 .button {
-  margin-top: 16px;
+  margin-top: 12px;
   background-color: #1e3a8a; /* Primary color */
   color: white;
-  padding: 12px 20px;
-  font-size: 16px;
+  padding: 10px 16px;
+  font-size: 14px;
   font-weight: bold;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
@@ -148,16 +158,21 @@ export default {
   }
 
   .card-title {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .card-value {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .button {
     font-size: 14px;
-    padding: 10px;
+    padding: 8px 12px;
+  }
+
+  .user-image {
+    width: 36px;
+    height: 36px;
   }
 }
 </style>
