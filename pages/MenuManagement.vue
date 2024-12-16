@@ -12,7 +12,7 @@
           class="flex justify-between items-center py-2 border-b border-gray-200 last:border-none"
         >
           <span class="text-gray-700 font-medium">
-            {{ item.name }} - {{ item.price }}
+            {{ item.name }} - ${{ item.price }}
           </span>
           <div class="flex space-x-3">
             <button
