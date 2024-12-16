@@ -36,7 +36,7 @@
 export default {
   methods: {
     goToMenu() {
-      this.$router.push('/menu-management');
+      this.$router.push('/MenuManagement');
     }
   }
 };
@@ -56,25 +56,25 @@ export default {
 /* Card Container */
 .card-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two columns */
-  gap: 20px; /* Spacing between cards */
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 20px; 
   width: 100%;
-  margin: 0 auto; /* Center the container */
+  margin: 0 auto; 
 }
 
 /* Align cards within columns */
 .card-container > :nth-child(-n+3) {
-  justify-self: start; /* Align first 3 cards to the left */
+  justify-self: start; 
 }
 
 .card-container > :nth-child(n+4) {
-  justify-self: end; /* Align last 3 cards to the right */
+  justify-self: end;
 }
 
 /* Card Styling */
 .card {
   background: #ffffff;
-  padding: 24px;
+  padding: 44px;
   border-radius: 15px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
   text-align: left;
