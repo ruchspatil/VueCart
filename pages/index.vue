@@ -66,7 +66,8 @@ body {
   height: 100%; /* Ensure html and body span the full height */
   width: 100%; /* Ensure html and body span the full width */
   overflow-x: hidden; /* Prevent horizontal scrolling */
-  background-color: #B1D4E0; /* Apply the desired background color */
+  background: rgb(19,15,126);
+  background: linear-gradient(0deg, rgba(19,15,126,1) 0%, rgba(231,241,255,1) 100%);
   font-family: "Open Sans", sans-serif;
 }
 
