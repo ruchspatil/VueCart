@@ -12,7 +12,7 @@
           class="flex justify-between items-center py-2 border-b border-gray-200 last:border-none"
         >
           <span class="text-gray-700 font-medium">
-            {{ item.name }} - ${{ item.price }}
+            {{ item.name }} - Rs.{{ item.price }}
           </span>
           <div class="flex space-x-3">
             <button
@@ -164,7 +164,7 @@ export default {
 
 /* Input Styling */
 .input-field {
-  width: 100%;
+  width: 90%;
   padding: 12px;
   margin-top: 8px;
   border: 1px solid #d1d5db;
@@ -173,7 +173,6 @@ export default {
   color: #374151;
 }
 
-/* Buttons */
 .button-secondary {
   background-color: #f3f4f6; /* Light Gray */
   color: #1e3a8a; /* Primary Blue */
@@ -184,7 +183,9 @@ export default {
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
+  margin-right: 12px; /* Small gap on the right */
 }
+
 
 .button-secondary:hover {
   background-color: #1e3a8a;
