@@ -60,21 +60,25 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 :root {
-  --primary-color: #4caf50; /* Green */
-  --primary-color-hover: #43a047;
-  --secondary-color: #ff9800; /* Orange */
-  --secondary-color-hover: #fb8c00;
-  --text-color: #333;
-  --background-color: #f9f9f9;
-  --header-bg: #2c3e50; /* Dark Blue */
-  --footer-bg: #2c3e50;
+  --primary-color: #1d3557; /* Dark Blue */
+  --primary-color-light: #457b9d; /* Medium Blue */
+  --accent-color: #e63946; /* Red */
+  --background-color: #f1faee; /* Light Background */
+  --text-color: #343a40; /* Dark Gray */
   --white: #ffffff;
+  --header-bg: #1d3557;
+  --footer-bg: #1d3557;
 }
 
-.main-container {
+body {
+  margin: 0;
+  padding: 0;
   font-family: 'Poppins', sans-serif;
   background-color: var(--background-color);
   color: var(--text-color);
+}
+
+.main-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -82,8 +86,7 @@ export default {
 
 .header {
   background-color: var(--header-bg);
-  color: var(--white);
-  padding: 20px;
+  padding: 20px 40px;
 }
 
 .navbar {
@@ -95,7 +98,7 @@ export default {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 30px;
   margin: 0;
   padding: 0;
 }
@@ -109,11 +112,11 @@ export default {
 }
 
 .nav-link:hover {
-  color: var(--secondary-color);
+  color: var(--accent-color);
 }
 
 .login-button {
-  background-color: var(--secondary-color);
+  background-color: var(--accent-color);
   color: var(--white);
   border: none;
   border-radius: 4px;
@@ -124,12 +127,12 @@ export default {
 }
 
 .login-button:hover {
-  background-color: var(--secondary-color-hover);
+  background-color: #d62828;
 }
 
 .content {
   flex: 1;
-  padding: 40px 20px;
+  padding: 60px 20px;
 }
 
 .container {
@@ -138,18 +141,19 @@ export default {
 }
 
 .hero {
-  background: linear-gradient(135deg, var(--primary-color), var(--primary-color-hover));
+  background: linear-gradient(135deg, var(--primary-color-light), var(--primary-color));
   color: var(--white);
   text-align: center;
-  padding: 60px 20px;
+  padding: 80px 20px;
   border-radius: 8px;
   margin-bottom: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .hero-title {
-  font-size: 36px;
+  font-size: 40px;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .hero-description {
@@ -158,7 +162,7 @@ export default {
 }
 
 .section-title {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 600;
   margin-bottom: 15px;
   color: var(--primary-color);
@@ -184,5 +188,6 @@ export default {
   color: var(--white);
   text-align: center;
   padding: 20px;
+  margin-top: auto;
 }
 </style>
