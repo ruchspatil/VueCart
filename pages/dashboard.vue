@@ -2,7 +2,7 @@
   <div class="dashboard-container min-h-screen flex flex-col items-center bg-gradient-to-r from-blue-100 via-white to-blue-50">
     <h1 class="text-4xl font-bold mb-10 text-primary mt-8">Welcome to Your Dashboard</h1>
 
-    <!-- Card Section with Left and Right Alignment -->
+    <!-- Flex-based Card Section -->
     <div class="card-container w-11/12 max-w-screen-xl">
       <div class="card">
         <h2 class="card-title">Sales Overview</h2>
@@ -53,28 +53,22 @@ export default {
   padding-top: 20px;
 }
 
-/* Card Container */
+/* Flex-Based Card Container */
 .card-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); 
-  gap: 20px; 
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping to the next row */
+  justify-content: space-between; /* Distributes cards with space in between */
+  gap: 20px; /* Small gap between cards */
   width: 100%;
-  margin: 0 auto; 
-}
-
-/* Align cards within columns */
-.card-container > :nth-child(-n+3) {
-  justify-self: start; 
-}
-
-.card-container > :nth-child(n+4) {
-  justify-self: end;
+  margin: 0 auto; /* Center container */
 }
 
 /* Card Styling */
 .card {
+  flex: 1 1 calc(48% - 20px); /* Cards take up 48% width, adjust for the gap */
+  max-width: 500px; /* Prevent cards from growing too large */
   background: #ffffff;
-  padding: 44px;
+  padding: 24px;
   border-radius: 15px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
   text-align: left;
@@ -121,10 +115,12 @@ export default {
 /* Responsive Styling */
 @media (max-width: 640px) {
   .card-container {
-    grid-template-columns: 1fr; /* Single column for smaller screens */
+    flex-direction: column; /* Stacks cards in a column for smaller screens */
+    gap: 16px; /* Adjust the gap */
   }
 
   .card {
+    flex: 1 1 100%; /* Cards take full width */
     padding: 16px;
   }
 
