@@ -97,7 +97,7 @@ body {
 .navbar .links a {
   font-weight: 500;
   text-decoration: none;
-  color: #fff;
+  color: #0C2D48;
   padding: 10px 0;
   transition: 0.2s ease;
 }
@@ -125,7 +125,6 @@ body {
   transition: 0.2s ease;
 }
 .navbar .buttons .signup:hover {
-  background-color: #47b2e4;
   color: #0C2D48;
 }
 .hero-section {
