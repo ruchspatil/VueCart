@@ -7,6 +7,13 @@
 
     <main class="content">
       <div class="container">
+        <section class="hero">
+          <div class="hero-text">
+            <h2 class="hero-title">Welcome to MyShop</h2>
+            <p class="hero-description">Your one-stop solution for online store management.</p>
+          </div>
+        </section>
+
         <section class="about">
           <h2 class="section-title">About MyShop</h2>
           <p class="description">
@@ -46,13 +53,28 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
+:root {
+  --primary-color: #ff9800;
+  --primary-color-hover: #e68900;
+  --text-color: #333;
+  --background-color: #f9f9f9;
+  --header-bg: #333;
+  --footer-bg: #333;
+  --white: #ffffff;
+}
+
 .main-container {
   font-family: 'Poppins', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .header {
-  background-color: #333;
-  color: white;
+  background-color: var(--header-bg);
+  color: var(--white);
   padding: 20px;
   display: flex;
   justify-content: space-between;
@@ -60,13 +82,13 @@ export default {
 }
 
 .header-title {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: bold;
 }
 
 .login-button {
-  background-color: #ff9800;
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--white);
   border: none;
   border-radius: 4px;
   padding: 10px 20px;
@@ -76,11 +98,12 @@ export default {
 }
 
 .login-button:hover {
-  background-color: #e68900;
+  background-color: var(--primary-color-hover);
 }
 
 .content {
-  padding: 20px;
+  flex: 1;
+  padding: 40px 20px;
 }
 
 .container {
@@ -88,23 +111,36 @@ export default {
   margin: 0 auto;
 }
 
-.about {
-  margin-bottom: 20px;
+.hero {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-color-hover));
+  color: var(--white);
+  text-align: center;
+  padding: 60px 20px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+
+.hero-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.hero-description {
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 .section-title {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  color: var(--primary-color);
 }
 
 .description {
   font-size: 16px;
-  line-height: 1.6;
-}
-
-.features {
-  margin-bottom: 20px;
+  line-height: 1.8;
 }
 
 .feature-list {
@@ -114,12 +150,12 @@ export default {
 }
 
 .feature-list li {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .footer {
-  background-color: #333;
-  color: white;
+  background-color: var(--footer-bg);
+  color: var(--white);
   text-align: center;
   padding: 20px;
 }
