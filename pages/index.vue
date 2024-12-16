@@ -49,8 +49,7 @@
       </div>
       <div class="img">
        
-        <img src="/images/store.jpg" alt="Image" />
-
+        <img src="public/images/store.jpg" alt="Image" />
 
       </div>
     </section>
