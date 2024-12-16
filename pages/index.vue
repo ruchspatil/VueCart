@@ -131,6 +131,7 @@ body {
   transition: 0.2s ease;
 }
 .navbar .buttons .signup:hover {
+  background-color: #fff;
   color: #0C2D48;
 }
 
@@ -146,7 +147,7 @@ body {
 }
 .hero-section .hero {
   max-width: 50%;
-  color: #145DA0;
+  color: #fff;
   text-align: center; /* Center the text */
 }
 .hero h2 {
