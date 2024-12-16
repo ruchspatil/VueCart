@@ -59,17 +59,18 @@
             required
           />
         </div>
-        <button type="submit" class="button">
-          {{ isEditing ? 'Update Item' : 'Add Item' }}
-        </button>
-        <button
-          v-if="isEditing"
-          type="button"
-          class="button-secondary ml-4"
-          @click="cancelEditing"
-        >
-          Cancel
-        </button>
+       <button type="submit" class="button">
+         {{ isEditing ? 'Update Item' : 'Add Item' }}
+      </button>
+       <button
+       v-if="isEditing"
+      type="button"
+      class="button-secondary ml-3" 
+    @click="cancelEditing"
+>
+  Cancel
+</button>
+
       </form>
     </div>
   </div>
@@ -104,7 +105,7 @@ export default {
     startEditingItem(index) {
       this.isEditing = true;
       this.editingIndex = index;
-      this.currentItem = { ...this.menuItems[index] }; // Clone the item for editing
+      this.currentItem = { ...this.menuItems[index] }; 
     },
     updateMenuItem() {
       if (this.currentItem.name && this.currentItem.price) {
