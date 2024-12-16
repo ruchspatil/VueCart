@@ -1,4 +1,30 @@
-/* Container Styling */
+<template>
+  <div class="login-container">
+    <h1>Login</h1>
+    <form class="login-form">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input id="username" type="text" placeholder="Enter your username" />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="Enter your password" />
+      </div>
+
+      <button type="submit" class="login-button">Login</button>
+    </form>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "LoginPage",
+};
+</script>
+
+<style scoped>
+  /* Container Styling */
 .login-container {
   max-width: 400px;
   margin: 100px auto;
@@ -79,3 +105,4 @@
     padding: 10px 15px;
   }
 }
+</style>
