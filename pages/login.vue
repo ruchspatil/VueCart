@@ -1,29 +1,3 @@
-<template>
-  <div class="login-container">
-    <h1>Login</h1>
-    <form class="login-form">
-      <div class="form-group">
-        <label for="username">Username</label>
-        <input id="username" type="text" placeholder="Enter your username" />
-      </div>
-
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input id="password" type="password" placeholder="Enter your password" />
-      </div>
-
-      <button type="submit" class="login-button">Login</button>
-    </form>
-  </div>
-</template>
-
-<script>
-export default {
-  name: "LoginPage",
-};
-</script>
-
-<style scoped>
 /* Container Styling */
 .login-container {
   max-width: 400px;
@@ -73,7 +47,7 @@ export default {
 }
 
 .form-group input:focus {
-  border-color: #291e5c
+  border-color: #291e5c;
   box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
 }
 
@@ -105,4 +79,3 @@ export default {
     padding: 10px 15px;
   }
 }
-</style>
