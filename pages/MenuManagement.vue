@@ -3,34 +3,54 @@
     <h1 class="text-3xl font-bold mb-6">Menu Management</h1>
 
     <!-- Menu List -->
-    <div class="card w-3/4">
+    <div class="card">
       <h2 class="card-title">Current Menu</h2>
       <ul>
-        <li class="flex justify-between items-center py-2">
-          <span>Pizza - $15.00</span>
-          <button class="text-primary">Edit</button>
-          <button class="text-red-500">Delete</button>
+        <li
+          v-for="(item, index) in menuItems"
+          :key="index"
+          class="flex justify-between items-center py-2"
+        >
+          <span>{{ item.name }} - {{ item.price }}</span>
+          <div class="space-x-3">
+            <button class="text-primary hover:underline">Edit</button>
+            <button
+              class="text-red-500 hover:underline"
+              @click="deleteMenuItem(index)"
+            >
+              Delete
+            </button>
+          </div>
         </li>
-        <li class="flex justify-between items-center py-2">
-          <span>Burger - $10.00</span>
-          <button class="text-primary">Edit</button>
-          <button class="text-red-500">Delete</button>
-        </li>
-        <!-- Add more items -->
       </ul>
     </div>
 
     <!-- Add New Menu Item -->
-    <div class="card w-3/4 mt-6">
+    <div class="card mt-6">
       <h2 class="card-title">Add New Item</h2>
       <form @submit.prevent="addMenuItem">
         <div class="mb-4">
           <label for="item-name" class="block text-gray-600">Item Name</label>
-          <input type="text" v-model="newItemName" id="item-name" class="input-field" required />
+          <input
+            type="text"
+            v-model="newItemName"
+            id="item-name"
+            class="input-field"
+            placeholder="Enter item name"
+            required
+          />
         </div>
         <div class="mb-4">
           <label for="item-price" class="block text-gray-600">Price</label>
-          <input type="number" v-model="newItemPrice" id="item-price" class="input-field" required />
+          <input
+            type="number"
+            v-model="newItemPrice"
+            id="item-price"
+            class="input-field"
+            placeholder="Enter price"
+            min="0"
+            required
+          />
         </div>
         <button type="submit" class="button">Add Item</button>
       </form>
@@ -46,17 +66,25 @@ export default {
       newItemPrice: '',
       menuItems: [
         { name: 'Pizza', price: '$15.00' },
-        { name: 'Burger', price: '$10.00' }
-      ]
+        { name: 'Burger', price: '$10.00' },
+      ],
     };
   },
   methods: {
     addMenuItem() {
-      this.menuItems.push({ name: this.newItemName, price: `$${this.newItemPrice}` });
-      this.newItemName = '';
-      this.newItemPrice = '';
-    }
-  }
+      if (this.newItemName && this.newItemPrice) {
+        this.menuItems.push({
+          name: this.newItemName,
+          price: `$${parseFloat(this.newItemPrice).toFixed(2)}`,
+        });
+        this.newItemName = '';
+        this.newItemPrice = '';
+      }
+    },
+    deleteMenuItem(index) {
+      this.menuItems.splice(index, 1);
+    },
+  },
 };
 </script>
 
@@ -79,8 +107,9 @@ export default {
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
   text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 75%; /* Increase card width */
-  max-width: 800px; /* Optional: Add max-width for larger screens */
+  width: 75%; /* Maintain consistent width */
+  max-width: 800px;
+  margin-bottom: 20px; /* Add bottom gap between cards */
 }
 
 .card:hover {
