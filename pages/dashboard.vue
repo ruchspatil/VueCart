@@ -2,8 +2,8 @@
   <div class="dashboard-container min-h-screen flex flex-col items-center bg-gradient-to-r from-blue-100 via-white to-blue-50">
     <h1 class="text-4xl font-bold mb-10 text-primary mt-8">Welcome to Your Dashboard</h1>
 
-    <!-- Overview Section -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-11/12 max-w-screen-xl">
+    <!-- Card Section with Left and Right Alignment -->
+    <div class="card-container w-11/12 max-w-screen-xl">
       <div class="card">
         <h2 class="card-title">Sales Overview</h2>
         <p class="card-value">$1,200</p>
@@ -16,10 +16,6 @@
         <h2 class="card-title">Customer Feedback</h2>
         <p class="card-value">4.5/5</p>
       </div>
-    </div>
-
-    <!-- Management Section -->
-    <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-11/12 max-w-screen-xl">
       <div class="card">
         <h2 class="card-title">Manage Menu</h2>
         <button @click="goToMenu" class="button">Go to Menu</button>
@@ -57,13 +53,31 @@ export default {
   padding-top: 20px;
 }
 
+/* Card Container */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 20px; /* Spacing between cards */
+  width: 100%;
+  margin: 0 auto; /* Center the container */
+}
+
+/* Align cards within columns */
+.card-container > :nth-child(-n+3) {
+  justify-self: start; /* Align first 3 cards to the left */
+}
+
+.card-container > :nth-child(n+4) {
+  justify-self: end; /* Align last 3 cards to the right */
+}
+
 /* Card Styling */
 .card {
   background: #ffffff;
   padding: 24px;
   border-radius: 15px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-  text-align: center;
+  text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -106,6 +120,10 @@ export default {
 
 /* Responsive Styling */
 @media (max-width: 640px) {
+  .card-container {
+    grid-template-columns: 1fr; /* Single column for smaller screens */
+  }
+
   .card {
     padding: 16px;
   }
