@@ -12,8 +12,25 @@
         <input id="password" type="password" placeholder="Enter your password" />
       </div>
 
+      <div class="form-group remember-me">
+        <label>
+          <input type="checkbox" />
+          Remember Me
+        </label>
+        <router-link to="/forgot-password" class="forgot-password">Forgot Password?</router-link>
+      </div>
+
       <button type="submit" class="login-button">Login</button>
+
+      <div class="social-login">
+        <button type="button" class="google-button">Continue with Google</button>
+        <button type="button" class="apple-button">Continue with Apple</button>
+      </div>
     </form>
+
+    <div class="signup-link">
+      Don't have an account? <router-link to="/signup">Sign Up</router-link>
+    </div>
   </div>
 </template>
 
@@ -24,7 +41,7 @@ export default {
 </script>
 
 <style scoped>
-  /* Container Styling */
+/* Container Styling */
 .login-container {
   max-width: 400px;
   margin: 100px auto;
@@ -77,6 +94,26 @@ export default {
   box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
 }
 
+/* Remember Me & Forgot Password Styling */
+.remember-me {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #555555;
+}
+
+.forgot-password {
+  text-decoration: none;
+  color: #2755ab;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+  color: #2053b3;
+}
+
 /* Button Styling */
 .login-button {
   padding: 12px 20px;
@@ -90,7 +127,58 @@ export default {
 }
 
 .login-button:hover {
-  background-color: #45a049;
+  background-color: #2053b3;
+}
+
+/* Social Login Buttons */
+.social-login {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.google-button,
+.apple-button {
+  padding: 10px;
+  font-size: 14px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.google-button {
+  background-color: #db4437; /* Google Red */
+}
+
+.google-button:hover {
+  background-color: #c33c30;
+}
+
+.apple-button {
+  background-color: #000; /* Apple Black */
+}
+
+.apple-button:hover {
+  background-color: #333;
+}
+
+/* Sign Up Link */
+.signup-link {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.signup-link a {
+  text-decoration: none;
+  color: #2755ab;
+  font-weight: bold;
+}
+
+.signup-link a:hover {
+  color: #2053b3;
 }
 
 /* Responsive Design */
