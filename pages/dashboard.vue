@@ -29,10 +29,12 @@
         <button class="button">View Orders</button>
       </div>
 
-      <!-- Recent Orders Card -->
-      <div class="card mt-6">
-        <h2 class="card-title">Recent Orders</h2>
-        <div class="mb-4">
+      <!-- Enhanced Recent Orders Card -->
+      <div class="card recent-orders mt-6">
+        <h2 class="card-title text-2xl font-bold text-white bg-primary p-4 rounded-lg shadow-lg">
+          Recent Orders
+        </h2>
+        <div class="mb-4 mt-6">
           <label for="order-filter-date" class="block text-gray-600">Filter by Date</label>
           <input
             type="date"
@@ -141,28 +143,44 @@ export default {
   color: #1e3a8a;
 }
 
+/* Recent Orders Styling */
+.recent-orders {
+  background-color: #1e3a8a; /* Deep blue */
+  color: white;
+  flex: 1 1 100%; 
+  padding: 24px;
+  border-radius: 15px;
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recent-orders:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
 /* Order Item Styling */
-.card ul {
+.recent-orders ul {
   list-style: none;
   padding: 0;
 }
 
-.card ul li {
+.recent-orders ul li {
   display: flex;
   justify-content: space-between;
   padding: 8px 0;
   border-bottom: 1px solid #e5e7eb;
 }
 
-.card ul li:last-child {
+.recent-orders ul li:last-child {
   border-bottom: none;
 }
 
-.card .status-completed {
+.recent-orders .status-completed {
   color: #4caf50; /* Green for completed orders */
 }
 
-.card .status-pending {
+.recent-orders .status-pending {
   color: #ff9800; /* Orange for pending orders */
 }
 
