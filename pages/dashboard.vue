@@ -31,9 +31,9 @@
 
       <!-- Enhanced Recent Orders Card -->
       <div class="card recent-orders mt-6">
-        <h2 class="card-title text-2xl font-bold text-white bg-primary p-4 rounded-lg shadow-lg">
-          Recent Orders
-        </h2>
+        <h2 class="card-title2">
+    Recent Orders
+  </h2>
         <div class="mb-4 mt-6">
           <label for="order-filter-date" class="block text-gray-600">Filter by Date</label>
           <input
@@ -129,7 +129,15 @@ export default {
   transform: translateY(-5px);
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
 }
-
+card-title2 {
+  font-size: 1.25rem; /* Equivalent to text-2xl */
+  font-weight: bold;
+  color: white; /* White text */
+  background-color: #1e3a8a; /* Primary background color */
+  padding: 1rem; /* Equivalent to p-4 */
+  border-radius: 0.5rem; /* Equivalent to rounded-lg */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Equivalent to shadow-lg */
+}
 .card-title {
   font-size: 20px;
   font-weight: bold;
@@ -186,7 +194,7 @@ export default {
 
 /* Input Styling */
 .input-field {
-  width: 100%;
+  width: 90%;
   padding: 12px;
   margin-top: 8px;
   border: 1px solid #d1d5db;
