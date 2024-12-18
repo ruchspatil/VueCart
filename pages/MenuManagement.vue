@@ -37,7 +37,6 @@
       <h2 class="card-title">{{ isEditing ? 'Edit Item' : 'Add New Item' }}</h2>
       <form @submit.prevent="isEditing ? updateMenuItem() : addMenuItem()">
         <div class="mb-4">
-          <label for="item-name" class="block text-gray-600">Item Name</label>
           <input
             type="text"
             v-model="currentItem.name"
@@ -47,8 +46,7 @@
             required
           />
         </div>
-        <div class="mb-4">
-          <label for="item-price" class="block text-gray-600">Price</label>
+        <div class="mb-4">       
           <input
             type="number"
             v-model="currentItem.price"
