@@ -30,10 +30,8 @@
       </div>
 
       <!-- Enhanced Recent Orders Card -->
-      <div class="card recent-orders mt-6">
-        <h2 class="card-title2">
-    Recent Orders
-  </h2>
+      <div class="card recent-orders mt-6 mx-auto">
+        <h2 class="card-title2">Recent Orders</h2>
         <div class="mb-4 mt-6">
           <label for="order-filter-date" class="block text-gray-600">Filter by Date</label>
           <input
@@ -129,37 +127,16 @@ export default {
   transform: translateY(-5px);
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
 }
-card-title2 {
-  font-size: 1.25rem; /* Equivalent to text-2xl */
-  font-weight: bold;
-  color: white; /* White text */
-  background-color: #1e3a8a; /* Primary background color */
-  padding: 1rem; /* Equivalent to p-4 */
-  border-radius: 0.5rem; /* Equivalent to rounded-lg */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Equivalent to shadow-lg */
-}
-.card-title {
-  font-size: 20px;
-  font-weight: bold;
-  color: #374151;
-}
 
-.card-value {
-  font-size: 28px;
-  font-weight: bold;
-  margin-top: 12px;
-  color: #1e3a8a;
-}
-
-/* Recent Orders Styling */
+/* Recent Orders Card Styling */
 .recent-orders {
   background-color: #1e3a8a; /* Deep blue */
   color: white;
-  flex: 1 1 100%; 
   padding: 24px;
   border-radius: 15px;
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1 1 100%; 
 }
 
 .recent-orders:hover {
@@ -194,7 +171,7 @@ card-title2 {
 
 /* Input Styling */
 .input-field {
-  width: 90%;
+  width: 95%;
   padding: 12px;
   margin-top: 8px;
   border: 1px solid #d1d5db;
