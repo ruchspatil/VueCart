@@ -28,12 +28,60 @@
         <h2 class="card-title">View Orders</h2>
         <button class="button">View Orders</button>
       </div>
+
+      <!-- Recent Orders Card -->
+      <div class="card mt-6">
+        <h2 class="card-title">Recent Orders</h2>
+        <div class="mb-4">
+          <label for="order-filter-date" class="block text-gray-600">Filter by Date</label>
+          <input
+            type="date"
+            v-model="filterDate"
+            id="order-filter-date"
+            class="input-field"
+          />
+        </div>
+        <ul>
+          <li
+            v-for="(order, index) in filteredOrders"
+            :key="index"
+            class="flex justify-between items-center py-2 border-b border-gray-200 last:border-none"
+          >
+            <div class="text-gray-700 font-medium">
+              <span>{{ order.itemName }} - ${{ order.price }}</span>
+            </div>
+            <div class="flex items-center">
+              <span :class="order.statusClass">{{ order.status }}</span>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      filterDate: '',
+      orders: [
+        { itemName: 'Pizza', price: 15.00, date: '2024-12-15', status: 'Completed' },
+        { itemName: 'Burger', price: 10.00, date: '2024-12-17', status: 'Pending' },
+        { itemName: 'Pasta', price: 12.00, date: '2024-12-18', status: 'Completed' },
+      ],
+    };
+  },
+  computed: {
+    filteredOrders() {
+      // If no filter date is set, return all orders
+      if (!this.filterDate) {
+        return this.orders;
+      }
+      // Filter orders based on the selected date
+      return this.orders.filter(order => order.date === this.filterDate);
+    }
+  },
   methods: {
     goToMenu() {
       this.$router.push('/MenuManagement');
@@ -56,11 +104,11 @@ export default {
 /* Flex-Based Card Container */
 .card-container {
   display: flex;
-  flex-wrap: wrap; /* Allows wrapping to the next row */
-  justify-content: space-between; /* Distributes cards with space in between */
-  gap: 20px; /* Small gap between cards */
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
   width: 100%;
-  margin: 0 auto; /* Center container */
+  margin: 0 auto;
 }
 
 /* Card Styling */
@@ -83,20 +131,56 @@ export default {
 .card-title {
   font-size: 20px;
   font-weight: bold;
-  color: #374151; /* Dark gray */
+  color: #374151;
 }
 
 .card-value {
   font-size: 28px;
   font-weight: bold;
   margin-top: 12px;
-  color: #1e3a8a; /* Deep blue */
+  color: #1e3a8a;
+}
+
+/* Order Item Styling */
+.card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card ul li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.card ul li:last-child {
+  border-bottom: none;
+}
+
+.card .status-completed {
+  color: #4caf50; /* Green for completed orders */
+}
+
+.card .status-pending {
+  color: #ff9800; /* Orange for pending orders */
+}
+
+/* Input Styling */
+.input-field {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #374151;
 }
 
 /* Button Styling */
 .button {
   margin-top: 16px;
-  background-color: #1e3a8a; /* Primary color */
+  background-color: #1e3a8a;
   color: white;
   padding: 12px 20px;
   font-size: 16px;
@@ -108,15 +192,15 @@ export default {
 }
 
 .button:hover {
-  background-color: #3b82f6; /* Lighter blue */
+  background-color: #3b82f6;
   transform: scale(1.05);
 }
 
 /* Responsive Styling */
 @media (max-width: 640px) {
   .card-container {
-    flex-direction: column; /* Stacks cards in a column for smaller screens */
-    gap: 16px; /* Adjust the gap */
+    flex-direction: column;
+    gap: 16px;
   }
 
   .card {
