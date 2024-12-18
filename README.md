@@ -1,8 +1,8 @@
 # VueCart
 
-# MyShop - Store Management System
+# Store Management System
 
-MyShop is an intuitive online store management system built with Vue.js that allows store owners to efficiently manage their inventory, track orders, and provide a seamless shopping experience for customers.
+VueCart is an intuitive online store management system built with Vue.js that allows store owners to efficiently manage their inventory, track orders, and provide a seamless shopping experience for customers.
 
 ## Features
 
