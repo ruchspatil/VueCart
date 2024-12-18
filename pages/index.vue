@@ -40,7 +40,7 @@
           MyShop is an intuitive online store management system that allows store owners to manage their inventory, track orders, and provide a smooth shopping experience for customers.
         </p>
         <div class="buttons">
-          <router-link to="#" class="join">Join Now</router-link>
+          <router-link to="/login" class="join">Join Now</router-link>
           <router-link to="#" class="learn">Learn More</router-link>
         </div>
       </div>
