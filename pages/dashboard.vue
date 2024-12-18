@@ -138,10 +138,10 @@ export default {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   flex: 1 1 100%; 
   justify-content: center; 
-  max-width: 2500px; /* Optional: set a max-width for the card */
-  width: 100%; /* Ensure it takes up full width up to max-width */
-  margin-top: 20px; /* Adds some space above */
-  flex: 1 1 100%; /* Ensure it spans full width */
+  max-width: 2500px;
+  width: 100%; 
+  margin-top: 20px; 
+  flex: 1 1 100%; 
 }
 
 .recent-orders:hover {
@@ -176,7 +176,7 @@ export default {
 
 /* Input Styling */
 .input-field {
-  width: 95%;
+  width: 99%;
   padding: 12px;
   margin-top: 8px;
   border: 1px solid #d1d5db;
