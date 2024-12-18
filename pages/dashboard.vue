@@ -29,7 +29,7 @@
         <button class="button">View Orders</button>
       </div>
 
-      <!-- Enhanced Recent Orders Card -->
+    
       <div class="card recent-orders mt-6 mx-auto">
         <h2 class="card-title2">Recent Orders</h2>
         <div class="mb-4 mt-6">
@@ -137,6 +137,7 @@ export default {
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   flex: 1 1 100%; 
+  justify-content: center; 
 }
 
 .recent-orders:hover {
