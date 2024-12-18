@@ -6,7 +6,7 @@
     <div class="card-container w-11/12 max-w-screen-xl">
       <div class="card">
         <h2 class="card-title">Sales Overview</h2>
-        <p class="card-value">Rs.45,000</p>
+        <p class="card-value">$1,200</p>
       </div>
       <div class="card">
         <h2 class="card-title">Popular Item</h2>
