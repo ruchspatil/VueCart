@@ -15,16 +15,10 @@
             {{ item.name }} - Rs.{{ item.price }}
           </span>
           <div class="flex space-x-3">
-            <button
-              class="button-secondary"
-              @click="startEditingItem(index)"
-            >
+            <button class="button-secondary" @click="startEditingItem(index)">
               Edit
             </button>
-            <button
-              class="button-danger"
-              @click="deleteMenuItem(index)"
-            >
+            <button class="button-danger" @click="deleteMenuItem(index)">
               Delete
             </button>
           </div>
@@ -36,6 +30,7 @@
     <div class="card mt-6">
       <h2 class="card-title">{{ isEditing ? 'Edit Item' : 'Add New Item' }}</h2>
       <form @submit.prevent="isEditing ? updateMenuItem() : addMenuItem()">
+        <!-- Item Name Input -->
         <div class="mb-4">
           <label for="item-name" class="block text-gray-600">Item Name</label>
           <input
@@ -47,6 +42,8 @@
             required
           />
         </div>
+
+        <!-- Price Input -->
         <div class="mb-4">
           <label for="item-price" class="block text-gray-600">Price</label>
           <input
@@ -59,18 +56,21 @@
             required
           />
         </div>
-       <button type="submit" class="button">
-         {{ isEditing ? 'Update Item' : 'Add Item' }}
-      </button>
-       <button
-       v-if="isEditing"
-      type="button"
-      class="button-secondary ml-3" 
-    @click="cancelEditing"
->
-  Cancel
-</button>
 
+        <!-- Buttons -->
+        <div>
+          <button type="submit" class="button">
+            {{ isEditing ? 'Update Item' : 'Add Item' }}
+          </button>
+          <button
+            v-if="isEditing"
+            type="button"
+            class="button-secondary ml-3"
+            @click="cancelEditing"
+          >
+            Cancel
+          </button>
+        </div>
       </form>
     </div>
   </div>
@@ -105,7 +105,7 @@ export default {
     startEditingItem(index) {
       this.isEditing = true;
       this.editingIndex = index;
-      this.currentItem = { ...this.menuItems[index] }; 
+      this.currentItem = { ...this.menuItems[index] };
     },
     updateMenuItem() {
       if (this.currentItem.name && this.currentItem.price) {
@@ -147,9 +147,9 @@ export default {
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
   text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 75%; /* Maintain consistent width */
+  width: 75%;
   max-width: 800px;
-  margin-bottom: 20px; /* Add bottom gap between cards */
+  margin-bottom: 20px;
 }
 
 .card:hover {
@@ -160,7 +160,7 @@ export default {
 .card-title {
   font-size: 20px;
   font-weight: bold;
-  color: #374151; /* Dark gray */
+  color: #374151;
 }
 
 /* Input Styling */
@@ -174,9 +174,28 @@ export default {
   color: #374151;
 }
 
+/* Buttons */
+.button {
+  margin-top: 16px;
+  background-color: #1e3a8a;
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+  background-color: #3b82f6;
+  transform: scale(1.05);
+}
+
 .button-secondary {
-  background-color: #f3f4f6; /* Light Gray */
-  color: #1e3a8a; /* Primary Blue */
+  background-color: #f3f4f6;
+  color: #1e3a8a;
   padding: 8px 16px;
   font-size: 14px;
   font-weight: 600;
@@ -184,9 +203,7 @@ export default {
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
-  margin-right: 12px; /* Small gap on the right */
 }
-
 
 .button-secondary:hover {
   background-color: #1e3a8a;
@@ -194,8 +211,8 @@ export default {
 }
 
 .button-danger {
-  background-color: #fef2f2; /* Light Red */
-  color: #dc2626; /* Danger Red */
+  background-color: #fef2f2;
+  color: #dc2626;
   padding: 8px 16px;
   font-size: 14px;
   font-weight: 600;
@@ -210,43 +227,11 @@ export default {
   color: white;
 }
 
-/* General List Styling */
-ul li {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 8px 0;
-  border-bottom: 1px solid #e5e7eb;
-}
-
-ul li:last-child {
-  border-bottom: none;
-}
-
-/* General Button */
-.button {
-  margin-top: 16px;
-  background-color: #1e3a8a; /* Primary color */
-  color: white;
-  padding: 12px 20px;
-  font-size: 16px;
-  font-weight: bold;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.button:hover {
-  background-color: #3b82f6; /* Lighter blue */
-  transform: scale(1.05);
-}
-
 /* Responsive Styling */
 @media (max-width: 640px) {
   .card {
     padding: 16px;
-    width: 100%; /* Full width for smaller screens */
+    width: 100%;
   }
 
   .card-title {
