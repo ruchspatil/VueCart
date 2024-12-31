@@ -2,7 +2,6 @@
   <div class="dashboard-container min-h-screen flex flex-col items-center bg-gradient-to-r from-blue-100 via-white to-blue-50">
     <h1 class="text-4xl font-bold mb-10 text-primary mt-8">Welcome to Your Dashboard</h1>
 
-    <!-- Flex-based Card Section -->
     <div class="card-container w-11/12 max-w-screen-xl">
       <div class="card">
         <h2 class="card-title">Sales Overview</h2>
