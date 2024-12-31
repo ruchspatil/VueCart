@@ -71,7 +71,7 @@ export default {
 </script>
 
 <style scoped>
-/* Container Styling */
+  
 .login-container {
   max-width: 400px;
   margin: 100px auto;
@@ -82,7 +82,7 @@ export default {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Heading Styling */
+
 .login-container h1 {
   font-size: 24px;
   margin-bottom: 20px;
@@ -90,7 +90,7 @@ export default {
   font-weight: bold;
 }
 
-/* Form Styling */
+
 .login-form {
   display: flex;
   flex-direction: column;
@@ -124,7 +124,7 @@ export default {
   box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
 }
 
-/* Remember Me & Forgot Password Styling */
+
 .remember-me {
   display: flex;
   justify-content: space-between;
@@ -160,7 +160,6 @@ export default {
   background-color: #2053b3;
 }
 
-/* Social Login Buttons */
 .social-login {
   display: flex;
   flex-direction: column;
@@ -211,7 +210,7 @@ export default {
   color: #2053b3;
 }
 
-/* Responsive Design */
+
 @media (max-width: 500px) {
   .login-container {
     margin: 50px 20px;
