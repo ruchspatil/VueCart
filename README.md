@@ -16,7 +16,7 @@ VueCart is an intuitive online store management system built with Vue.js that al
 
 - **Frontend**: Vue.js (with Vue Router and Vuex)
 - **Styling**: Tailwind CSS for responsive design
-- **Deployment**: Deployed to Netlify platform.
+- **Deployment**: Deployed to Netlify platform
 
 ## Usage
 - **Login/Signup**: Create an account to access the store management dashboard.
