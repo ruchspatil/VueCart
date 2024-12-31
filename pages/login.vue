@@ -97,7 +97,6 @@ export default {
   gap: 20px;
 }
 
-/* Input Field Styling */
 .form-group {
   text-align: left;
 }
