@@ -143,7 +143,7 @@ export default {
   color: #2053b3;
 }
 
-/* Button Styling */
+
 .login-button {
   padding: 12px 20px;
   font-size: 16px;
