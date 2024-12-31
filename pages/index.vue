@@ -77,7 +77,7 @@ body {
   flex-direction: column;
 }
 
-/* Header Styles */
+
 .header {
   position: fixed;
   top: 0;
