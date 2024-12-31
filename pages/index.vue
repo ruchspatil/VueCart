@@ -186,7 +186,7 @@ body {
   color: #0C2D48;
 }
 
-/* Hamburger menu styles */
+
 #menu-toggle {
   display: none;
 }
