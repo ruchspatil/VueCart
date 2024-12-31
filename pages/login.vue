@@ -193,7 +193,7 @@ export default {
   background-color: #333;
 }
 
-/* Sign Up Link */
+
 .signup-link {
   margin-top: 20px;
   font-size: 14px;
