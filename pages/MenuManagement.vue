@@ -30,8 +30,7 @@
         </li>
       </ul>
     </div>
-
-    <!-- Add / Edit Menu Item -->
+    
     <div class="card mt-6">
       <h2 class="card-title">{{ isEditing ? 'Edit Item' : 'Add New Item' }}</h2>
       <form @submit.prevent="isEditing ? updateMenuItem() : addMenuItem()">
