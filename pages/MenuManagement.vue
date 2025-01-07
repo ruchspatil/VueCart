@@ -1,8 +1,7 @@
 <template>
   <div class="dashboard-container min-h-screen p-6">
     <h1 class="text-3xl font-bold mb-6">Menu Management</h1>
-
-    <!-- Menu List -->
+    
     <div class="card">
       <h2 class="card-title">Current Menu</h2>
       <ul>
